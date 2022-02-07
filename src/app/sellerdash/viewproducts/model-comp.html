@@ -1,0 +1,35 @@
+<div class="modal-header">
+  <h2 class="modal-title">Edit Product</h2>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-md-10 col-lg-10">
+        <form  >
+          <div class="form-group">
+            <label for="productName">Product name</label>
+            <textarea type="text" id="pname" rows=2 class="form-control" formControlName="title"
+              value="{{pname}}"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="productName">Product Description</label>
+            <textarea rows="5" id="pdesc" type="text" class="form-control" formControlName="description"
+              value="{{pdesc}}"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="productPrice">Product price</label>
+            <input type="text" id="pprice" class="form-control" formControlName="price" value="{{pprice}}">
+          </div>
+          <button id="btnSubmit" type="submit" class="btn btn-success" style="margin-bottom:10px;">Update Product 
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+
